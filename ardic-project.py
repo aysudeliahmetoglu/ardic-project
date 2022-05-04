@@ -21,14 +21,23 @@ operations=input("please enter operations:")
 operators={'*','/','+','-'}
 stack.append(operations)
 
-myStack.append(operations[0])
-myStack.append(operations[1])
-myStack.append(operations[2])
-myStack.append(operations[3])
-myStack.append(operations[4])
-myStack=int(myStack)
-
+for i in operations:
+    myStack.append(i)
 print(myStack)
+
+
+
+
+
+
+
+# myStack.append(operations[0])
+# myStack.append(operations[1])
+# myStack.append(operations[2])
+# myStack.append(operations[3])
+# myStack.append(operations[4])
+
+# print(myStack)
 # for i in range(0,10):
 #     # print(myStack[i])
 #     if myStack[1]=='*':
