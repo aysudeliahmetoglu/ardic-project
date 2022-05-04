@@ -14,42 +14,60 @@
 # # for i in range(1,size):
 # #     print(i)
 
-from collections import deque
-myStack = deque()
+# from collections import deque
+# myStack = deque()
+# stack=[]
+# operations=input("please enter operations:")
+# operators=['*','/','+','-']
+# stack.append(operations)
+
+# for i in operations:
+#     myStack.append(i)
+# print(myStack)
+# # mystack=int("+,-,*,/")
+
+# # for j in operators:
+# #     if mystack[i]==operators[j]:
+# #         print("operator var")
+# # myStack.append(operations[0])
+# # myStack.append(operations[1])
+# # myStack.append(operations[2])
+# # myStack.append(operations[3])
+# # myStack.append(operations[4])
+
+# # print(myStack)
+# # for i in range(0,10):
+# #     # print(myStack[i])
+# #     if myStack[1]=='*':
+# #         result=myStack[0]+myStack[2]
+# #         print(result)
+
+# #mutliply functions
+# # def Carp(myStack) :# #     result = 1
+# #     for x in myStack: 
+# #          result = result * x  
+# #     return result  
+# # Carp(myStack)
+
+
 stack=[]
 operations=input("please enter operations:")
-operators={'*','/','+','-'}
+operators=['*','/','+','-']
 stack.append(operations)
-
 for i in operations:
-    myStack.append(i)
-print(myStack)
+    stack.append(i)
+print(stack)
 
 
-
-
-
-
-
-# myStack.append(operations[0])
-# myStack.append(operations[1])
-# myStack.append(operations[2])
-# myStack.append(operations[3])
-# myStack.append(operations[4])
-
-# print(myStack)
-# for i in range(0,10):
-#     # print(myStack[i])
-#     if myStack[1]=='*':
-#         result=myStack[0]+myStack[2]
-#         print(result)
-
-#mutliply functions
-# def Carp(myStack) : 
-      
-     
-#     result = 1
-#     for x in myStack: 
-#          result = result * x  
-#     return result  
-# Carp(myStack)
+if stack[2]=='+':
+    result=int(stack[1])+int(stack[3])
+    print( result)
+elif stack[2]=='-':
+    result=int(stack[1])-int(stack[3])
+    print(result)
+elif stack[2]=='*':
+    result=int(stack[1])*int(stack[3])
+    print(result)
+elif stack[2]=='/':
+    result=int(stack[1])/int(stack[3])
+    print(result)    
