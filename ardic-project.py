@@ -1,69 +1,58 @@
 stack=[]
 operations=input("please enter operations:")
-operators=['*','/','+','-']
+# operators=['*','/','+','-']
 
 # stack.append(operations)
 
 for i in operations:
-    stack.append(i)
+    stack.append(i) 
 print(stack)
 toplam=0
 index=0
 size=len(stack)
 
 while (size!=1):
-    if stack[index] =='/':
-        toplam = int(stack[index-1])/int(stack[index+1])
-        
-        stack.pop(index+1)
-        stack.pop(index-1)
-        stack[index-1]=toplam 
-        index=-1
+    if '*' or '/' in stack:
 
-    elif stack[index] =='*':
-        toplam = int(stack[index-1])*int(stack[index+1])
-        
-        stack.pop(index+1)
-        stack.pop(index-1)
-        stack[index-1]=toplam 
-        index=-1
-        
-    elif stack[index] =='+':
-        toplam = int(stack[index-1])+int(stack[index+1])
-        
-        stack.pop(index+1)
-        stack.pop(index-1)
-        stack[index-1]=toplam 
-        index=-1
+        if stack[index] =='/':
+            print("bölme")
+            toplam = int(stack[index-1])/int(stack[index+1])
+            
+            stack.pop(index+1)
+            stack.pop(index-1)
+            stack[index-1]=toplam 
+            index=-1
+            print(stack)
+
+        elif stack[index] =='*':
+            toplam = int(stack[index-1])*int(stack[index+1])
+            
+            stack.pop(index+1)
+            stack.pop(index-1)
+            stack[index-1]=toplam 
+            index=-1
+    elif "-" or "+" in stack:
+        if stack[index] =='+':
+            toplam = int(stack[index-1])+int(stack[index+1])
+            
+            stack.pop(index+1)
+            stack.pop(index-1)
+            stack[index-1]=toplam 
+            index=-1
 
 
-    elif stack[index] =='-':
-        toplam = int(stack[index-1])-int(stack[index+1])
+        elif stack[index] =='-':
+            toplam = int(stack[index-1])-int(stack[index+1])
+            
+            stack.pop(index+1)
+            stack.pop(index-1)
+            stack[index-1]=toplam 
+            index=-1
+                
         
-        stack.pop(index+1)
-        stack.pop(index-1)
-        stack[index-1]=toplam 
-        index=-1
-               
-       
     size=len(stack) 
     
     index+=1
 print(toplam)
 print(stack)
-
-
-
-
-# if stack[2]=='+':
-#     result=int(stack[1])+int(stack[3])
-#     print( result)
-# elif stack[2]=='-':
-#     result=int(stack[1])-int(stack[3])
-#     print(result)
-# elif stack[2]=='*':
-#     result=int(stack[1])*int(stack[3])
-#     print(result)
-# elif stack[2]=='/':
-#     result=int(stack[1])/int(stack[3])
-    # print(result)    
+   
